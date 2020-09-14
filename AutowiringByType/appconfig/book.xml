@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+		<bean id="book" class="com.byType.Book" autowire="byType">
+		
+		<!-- <property name="author" ref="author"></property>  -->
+		
+		<property name="prize" value="207.87"></property>
+		<property name="isbn" value="70-00-000"></property>
+		</bean>
+        <bean id="author1" class="com.byType.Author">
+       
+       <!-- here id name is different. In byType spring check only the class type,
+       means class name check with bean id class same or not. -->
+       
+        <property name="name" value="JAVA"></property>
+        <property name="address" value="USA"></property>
+          </bean>
+       
+        
+</beans>
